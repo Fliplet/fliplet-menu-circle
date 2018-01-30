@@ -1,0 +1,31 @@
+{{#if pages}}
+  <!-- MENU BUTTON -->
+  <div class="fl-menu-circle-header {{#if location}}fl-menu-circle-left{{/if}}">
+    <div class="nav-toggle">
+      <i class="fa fa-bars"></i>
+      <i class="fa fa-close"></i>
+    </div>
+  </div>
+  <!-- END OF MENU BUTTON -->
+
+  <!-- EXPANDABLE CIRCLE -->
+  <div class="fl-menu-circle-nav-holder {{#if location}}fl-menu-circle-left{{/if}}">
+    <div class="nav-circle"></div>
+  </div>
+  <!-- END OF EXPANDABLE CIRCLE -->
+{{/if}}
+
+<!-- MENU -->
+<div class="fl-menu-circle-nav-list-holder {{#if location}}fl-menu-circle-left{{/if}}">
+  <ul class="nav-list">
+    {{#each pages}}
+      <li class="linked" data-fl-navigate='{{{action}}}' data-page-id="{{pageId}}"><i class="fa fa-angle-right"></i>{{label}}</li>
+    {{/each}}
+  </ul>
+  <div class="fl-menu-foot">
+    <div class="copyright">
+      <a href="#" open-about-overlay>About this app</a>
+    </div>
+  </div>
+</div>
+<!-- END OF MENU -->
