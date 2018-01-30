@@ -20,7 +20,7 @@ $('.fl-menu-circle-header .nav-toggle').on('click', function() {
   $('.fl-menu-circle-nav-holder .nav-circle').toggleClass('active');
   $('.fl-menu-circle-nav-list-holder').toggleClass('active').scrollTop(0);
 
-  if ($('body').hasScrollBar() && $('body').hasClass('disableScroll')) {
+  if ($('body').hasScrollBar() && $('body').hasClass('disableScroll') && Fliplet.Env.get('platform') !== 'native') {
     $('.fl-menu-circle-header, .fl-menu-circle-nav-holder').css({
       'right': '30px'
     });
