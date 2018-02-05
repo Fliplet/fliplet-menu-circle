@@ -1,4 +1,4 @@
-var $menuElement = $('[data-name="Expandable"]');
+var $menuElement = $('[data-name="Circle"]');
 var menuInstanceId = $menuElement.data('id');
 var data = Fliplet.Widget.getData(menuInstanceId) || {};
 
