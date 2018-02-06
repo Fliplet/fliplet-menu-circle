@@ -2,8 +2,11 @@
   <!-- MENU BUTTON -->
   <div class="fl-menu-circle-header {{#if location}}fl-menu-circle-left{{/if}}">
     <div class="nav-toggle">
-      <i class="fa fa-bars"></i>
-      <i class="fa fa-close"></i>
+      <div class="hamburger hamburger--slider">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </div>
     </div>
   </div>
   <!-- END OF MENU BUTTON -->
@@ -19,7 +22,7 @@
 <div class="fl-menu-circle-nav-list-holder {{#if location}}fl-menu-circle-left{{/if}}">
   <ul class="nav-list">
     {{#each pages}}
-      <li class="linked" data-fl-navigate='{{{action}}}' data-page-id="{{pageId}}"><i class="fa fa-angle-right"></i>{{label}}</li>
+      <li class="linked" data-fl-navigate='{{{action}}}' data-page-id="{{pageId}}">{{label}}</li>
     {{/each}}
   </ul>
   <div class="fl-menu-foot">

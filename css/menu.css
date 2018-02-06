@@ -29,38 +29,9 @@ body.disableScroll {
   color: #ffffff;
   cursor: pointer;
   overflow: hidden;
-}
-
-.fl-menu-circle-header .nav-toggle .fa {
-  display: block;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  opacity: 1;
-  visibility: visible;
-  transition: all 0.25s ease-out;
-}
-
-.fl-menu-circle-header .nav-toggle.active .fa-close,
-.fl-menu-circle-header .nav-toggle.active .fa-bars {
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
-}
-
-.fl-menu-circle-header .nav-toggle .fa-close {
-  line-height: 49px;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.fl-menu-circle-header .nav-toggle.active .fa-close {
-  opacity: 1;
-  visibility: visible;
-}
-
-.fl-menu-circle-header .nav-toggle.active .fa-bars {
-  opacity: 0;
-  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fl-menu-circle-header .nav-toggle.active {
@@ -170,20 +141,6 @@ body.disableScroll {
   transform: translate3d(0, 0, 0);
 }
 
-
-.fl-menu-circle-nav-list-holder .nav-list li .fa {
-  display: none;
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  top: 50%;
-  right: 0;
-  margin-top: -22px;
-  font-size: 28px;
-  line-height: 44px;
-  text-align: center;
-}
-
 @media screen and (max-width: 320px) {
   .fl-menu-circle-nav-list-holder .nav-list {
     padding-left: 15px;
@@ -200,4 +157,26 @@ body.disableScroll {
     padding-left: 75px;
     text-align: center;
   }
+}
+
+.hamburger {
+  padding: 0;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.hamburger-box {
+  height: 20px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #ffffff;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #333333;
 }

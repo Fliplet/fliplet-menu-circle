@@ -14,6 +14,7 @@
       "fliplet-core"
     ],
     "assets": [
+      "css/hamburgers.css",
       "css/menu.css",
       "js/menu.js"
     ]

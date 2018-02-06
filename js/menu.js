@@ -26,6 +26,7 @@ if (data.location) {
 
 $('.fl-menu-circle-header .nav-toggle').on('click', function() {
   $('body').toggleClass('disableScroll');
+  $(this).find('.hamburger').toggleClass('is-active');
   $(this).toggleClass('active');
   $('.fl-menu-circle-nav-holder .nav-circle').toggleClass('active');
   $('.fl-menu-circle-nav-list-holder').toggleClass('active').scrollTop(0);
