@@ -7,17 +7,9 @@ if (!data.location) {
   $('#menu-location').val('menuLeft').trigger('change');
 }
 
-if (!data.swipeBack) {
-  $('input[name="swipe-back"][value="no"]').prop('checked', true);
-} else {
-  $('input[name="swipe-back"][value="yes"]').prop('checked', true);
-}
-
 Fliplet.Widget.onSaveRequest(function() {
   var location;
-  var swipeBack;
   var menuLocation = $('#menu-location').val();
-  var swipe = $('input[name="swipe-back"]:checked').val();
 
   if (menuLocation === 'menuLeft') {
     location = true;
@@ -25,15 +17,8 @@ Fliplet.Widget.onSaveRequest(function() {
     location = false;
   }
 
-  if (swipe === 'yes') {
-    swipeBack = true;
-  } else {
-    swipeBack = false;
-  }
-
   Fliplet.Widget.save({
-    location: location,
-    swipeBack: swipeBack
+    location: location
   }).then(function() {
     Fliplet.Widget.complete();
   });

@@ -48,12 +48,6 @@ function init() {
     }
   });
 
-  if (data.swipeBack) {
-    $('body').hammer().bind('swiperight', function() {
-      Fliplet.Navigate.back();
-    });
-  }
-
   $('[open-about-overlay]').on('click', function() {
     Fliplet.Navigate.to({
       action: 'about-overlay'
