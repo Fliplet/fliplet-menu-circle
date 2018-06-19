@@ -143,7 +143,7 @@ body.disableScroll {
 }
 
 .fl-menu-circle-nav-list-holder .nav-list li.with-icon,
-.fl-menu-circle-nav-list-holder .nav-list li.with-icon ~ li {
+.fl-menu-circle-nav-list-holder .nav-list.with-icon li {
   padding-left: 44px;
   display: flex;
   align-items: center;

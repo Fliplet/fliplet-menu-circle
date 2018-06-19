@@ -8,6 +8,10 @@ if (menuInstanceId) {
 function init() {
   var data = Fliplet.Widget.getData(menuInstanceId) || {};
 
+  if ($('li.with-icon').length) {
+    $('.fl-menu-circle-nav-list-holder .nav-list').addClass('with-icons');
+  }
+
   $(function () {
     var el = $('<div style="width:100px;height:100px;overflow:scroll;position:absolute;top:-9999px;"/>'),
       elDom = el.get(0);
