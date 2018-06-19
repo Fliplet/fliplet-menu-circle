@@ -142,7 +142,8 @@ body.disableScroll {
   transition: all 0.15s ease-out 0.2s;
 }
 
-.fl-menu-circle-nav-list-holder .nav-list li.with-icon {
+.fl-menu-circle-nav-list-holder .nav-list li.with-icon,
+.fl-menu-circle-nav-list-holder .nav-list li.with-icon ~ li {
   padding-left: 44px;
   display: flex;
   align-items: center;
