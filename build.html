@@ -21,8 +21,15 @@
 <!-- MENU -->
 <div class="fl-menu-circle-nav-list-holder {{#if location}}fl-menu-circle-left{{/if}}">
   <ul class="nav-list">
-    {{#each pages}}
-      <li class="linked" data-fl-navigate='{{{action}}}' data-page-id="{{pageId}}">{{label}}</li>
+    {{#each pages as |page pageIndex|}}
+      <li class="linked {{#if page.icon}}with-icon{{/if}}" data-fl-navigate='{{{page.action}}}' data-page-id="{{page.pageId}}">
+        {{#if page.icon}}
+        <div class="fl-menu-icon">
+          <i class="{{page.icon}} fa-fw"></i>
+        </div>
+        {{/if}}
+        {{page.label}}
+      </li>
     {{/each}}
   </ul>
   <div class="fl-menu-foot">

@@ -142,6 +142,25 @@ body.disableScroll {
   transition: all 0.15s ease-out 0.2s;
 }
 
+.fl-menu-circle-nav-list-holder .nav-list li.with-icon,
+.fl-menu-circle-nav-list-holder .nav-list.with-icons li {
+  padding-left: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.fl-menu-circle-nav-list-holder .nav-list li .fl-menu-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 20px;
+}
+
 .fl-menu-circle-nav-list-holder.active .nav-list li {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
