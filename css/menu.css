@@ -12,7 +12,7 @@ body.disableScroll {
   bottom: calc(constant(safe-area-inset-bottom) + 15px);
   bottom: calc(env(safe-area-inset-bottom) + 15px);
   right: 15px;
-  z-index: 20;
+  z-index: 10;
 }
 
 .fl-menu-circle-header.fl-menu-circle-left {
@@ -54,7 +54,7 @@ body.disableScroll {
   width: 50px;
   height: 50px;
   overflow: visible;
-  z-index: 17;
+  z-index: 8;
 }
 
 .fl-menu-circle-nav-holder.fl-menu-circle-left {
@@ -91,7 +91,7 @@ body.disableScroll {
   padding-bottom: 30px;
   padding-bottom: calc(constant(safe-area-inset-bottom) + 30px);
   padding-bottom: calc(env(safe-area-inset-bottom) + 30px);
-  z-index: 18;
+  z-index: 9;
   -webkit-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
 }
