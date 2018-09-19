@@ -206,3 +206,8 @@ body.disableScroll {
 .hamburger.is-active .hamburger-inner::after {
   background-color: #333333;
 }
+
+/* Removes arrow from navigate.js appended Exit App menu item */
+[data-fl-exit-app].fa-angle-right.linked-icon {
+  display: none;
+}
