@@ -6,6 +6,12 @@ body.disableScroll {
   overflow: hidden;
 }
 
+body.fl-with-bottom-menu,
+body.fl-with-bottom-menu main.page-content-wrapper {
+  padding-bottom: 65px;
+  padding-bottom: calc(65px + env(safe-area-inset-bottom));
+}
+
 [data-fl-widget-instance][data-type="menu"] {
   position: fixed !important;
   bottom: 15px;
