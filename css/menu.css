@@ -2,8 +2,12 @@ body.disableScroll {
   overflow: hidden;
 }
 
-body.fl-with-bottom-menu,
-body.fl-with-bottom-menu main.page-content-wrapper {
+.no-supports-container .fl-with-bottom-menu {
+  padding-bottom: 65px;
+  padding-bottom: calc(65px + env(safe-area-inset-bottom));
+}
+
+.supports-container .fl-page-content-wrapper {
   padding-bottom: 65px;
   padding-bottom: calc(65px + env(safe-area-inset-bottom));
 }
