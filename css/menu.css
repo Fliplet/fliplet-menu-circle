@@ -1,7 +1,3 @@
-body {
-  height: 100%;
-}
-
 body.disableScroll {
   overflow: hidden;
 }
