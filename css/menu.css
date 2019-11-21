@@ -1,9 +1,15 @@
-body {
-  height: 100%;
-}
-
 body.disableScroll {
   overflow: hidden;
+}
+
+.no-supports-container .fl-with-bottom-menu {
+  padding-bottom: 65px;
+  padding-bottom: calc(65px + env(safe-area-inset-bottom));
+}
+
+.supports-container .fl-page-content-wrapper {
+  padding-bottom: 65px;
+  padding-bottom: calc(65px + env(safe-area-inset-bottom));
 }
 
 [data-fl-widget-instance][data-type="menu"] {
