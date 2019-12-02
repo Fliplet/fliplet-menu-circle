@@ -9,7 +9,6 @@ body.disableScroll {
 
 .supports-container .fl-page-content-wrapper {
   padding-bottom: 65px;
-  padding-bottom: calc(65px + env(safe-area-inset-bottom));
 }
 
 [data-fl-widget-instance][data-type="menu"] {
