@@ -26,8 +26,6 @@ function init() {
     return this.get(0).scrollHeight > this.height();
   }
 
-  $('body').addClass('fl-minimal-padding');
-
   if (data.location) {
     $('body').addClass('fl-menu-circle-left');
   } else {
