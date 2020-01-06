@@ -28,8 +28,10 @@ function init() {
 
   if (data.location) {
     $('body').addClass('fl-menu-circle-left');
+    $menuElement.addClass('fl-menu-circle-move-left');
   } else {
     $('body').addClass('fl-menu-circle-right');
+    $menuElement.removeClass('fl-menu-circle-move-left');
   }
 
   $('.fl-menu-circle-header .nav-toggle').on('click', function() {
