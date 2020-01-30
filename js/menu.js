@@ -35,21 +35,11 @@ function init() {
   }
 
   $('.fl-menu-circle-header .nav-toggle').on('click', function() {
-    $('body').toggleClass('disableScroll');
+    $('body').toggleClass('disableScroll circle-menu-active');
     $(this).find('.hamburger').toggleClass('is-active');
     $(this).toggleClass('active');
     $('.fl-menu-circle-nav-holder .nav-circle').toggleClass('active');
     $('.fl-menu-circle-nav-list-holder').toggleClass('active').scrollTop(0);
-
-    if (!$('body').hasClass('hiddenScroll') && $('body').hasScrollBar() && $('body').hasClass('disableScroll') && Fliplet.Env.get('platform') !== 'native') {
-      $('.fl-menu-circle-header, .fl-menu-circle-nav-holder').css({
-        'right': '30px'
-      });
-    } else {
-      $('.fl-menu-circle-header, .fl-menu-circle-nav-holder').css({
-        'right': '15px'
-      });
-    }
   });
 
   $('[open-about-overlay]').on('click', function() {
