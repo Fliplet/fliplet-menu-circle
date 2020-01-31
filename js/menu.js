@@ -42,6 +42,16 @@ function init() {
     $('.fl-menu-circle-nav-list-holder').toggleClass('active').scrollTop(0);
   });
 
+  if (!$('body').hasClass('hiddenScroll') && $('body').hasScrollBar() && $('body').hasClass('disableScroll') && Fliplet.Env.get('platform') !== 'native') {
+    $('.fl-menu-circle-header, .fl-menu-circle-nav-holder').css({
+      'right': '30px'
+    });
+  } else {
+    $('.fl-menu-circle-header, .fl-menu-circle-nav-holder').css({
+      'right': '15px'
+    });
+  }
+
   $('[open-about-overlay]').on('click', function() {
     Fliplet.Navigate.to({
       action: 'about-overlay'
