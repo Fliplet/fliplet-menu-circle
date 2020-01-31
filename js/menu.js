@@ -35,7 +35,7 @@ function init() {
   }
 
   $('.fl-menu-circle-header .nav-toggle').on('click', function() {
-    $('body').toggleClass('disableScroll');
+    $('body').toggleClass('disableScroll circle-menu-active');
     $(this).find('.hamburger').toggleClass('is-active');
     $(this).toggleClass('active');
     $('.fl-menu-circle-nav-holder .nav-circle').toggleClass('active');
