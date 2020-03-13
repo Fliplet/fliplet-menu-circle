@@ -50,6 +50,17 @@ function init() {
         'right': '15px'
       });
     }
+
+    $('[data-fl-exit-app]').html([
+      '<div class="fl-bottom-bar-icon-holder">',
+        '<div class="fl-menu-icon">',
+          '<i class="fa fa-sign-out"></i>',
+        '</div>',
+        '<div class="fl-menu-title">',
+          '<span>Exit</span>',
+        '</div>',
+      '</div>',
+    ].join(''));
   });
 
   $('[open-about-overlay]').on('click', function() {
