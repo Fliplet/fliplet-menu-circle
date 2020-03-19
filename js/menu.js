@@ -8,6 +8,26 @@ if (menuInstanceId) {
 function init() {
   var data = Fliplet.Widget.getData(menuInstanceId) || {};
 
+  Fliplet.Hooks.on('addExitAppMenuLink', function () {
+    var $exitButton = $([
+      '<li class="linked with-icon" data-fl-exit-app>',
+        '<div class="fl-menu-icon">',
+          '<i class="fa fa-sign-out"></i>',
+        '</div>',
+        'Exit',
+      '</li>'
+    ].join(''));
+  
+    $exitButton.on('click', function onExitClick() {
+      Fliplet.Navigate.exitApp();
+    });
+  
+    $menuElement.find('ul').append($exitButton);
+  
+    // Prevent default "Exit" link from being added
+    return Promise.reject();
+  });
+
   if ($('li.with-icon').length) {
     $('.fl-menu-circle-nav-list-holder .nav-list').addClass('with-icons');
   }
@@ -51,16 +71,6 @@ function init() {
       });
     }
 
-    $('[data-fl-exit-app]').html([
-      '<div class="fl-bottom-bar-icon-holder">',
-        '<div class="fl-menu-icon">',
-          '<i class="fa fa-sign-out"></i>',
-        '</div>',
-        '<div class="fl-menu-title">',
-          '<span>Exit</span>',
-        '</div>',
-      '</div>',
-    ].join(''));
   });
 
   $('[open-about-overlay]').on('click', function() {
