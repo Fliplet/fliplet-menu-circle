@@ -252,8 +252,3 @@ body.disableScroll {
 [data-fl-exit-app] .fa-angle-right.linked-icon {
   display: none;
 }
-
-/* Align exit button icon with other icons */
-[data-fl-exit-app] .fl-menu-icon {
-  padding-left: 7px;
-}
