@@ -21,9 +21,13 @@ Fliplet.Widget.onSaveRequest(function() {
     location: location
   }).then(function() {
     Fliplet.Widget.complete();
+    Fliplet.Studio.emit('reload-page-preview');
   });
 });
 
+Fliplet.Widget.toggleCancelButton(false);
+
 Fliplet.Widget.onCancelRequest(function() {
   Fliplet.Widget.complete();
+  Fliplet.Studio.emit('reload-page-preview');
 });
