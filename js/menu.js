@@ -54,7 +54,11 @@ function init() {
     $menuElement.removeClass('fl-menu-circle-move-left');
   }
 
-  $('.fl-menu-circle-header .nav-toggle').on('click', function() {
+  $('.fl-menu-circle-header .nav-toggle').on('click keydown', function() {
+    if (event.type !== 'click' && event.which !== 32 && event.which !== 13) {
+      return;
+    }
+
     $('body').toggleClass('disableScroll circle-menu-active');
     $(this).find('.hamburger').toggleClass('is-active');
     $(this).toggleClass('active');
