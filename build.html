@@ -1,7 +1,7 @@
 {{#if pages}}
   <!-- MENU BUTTON -->
-  <div class="fl-menu-circle-header {{#if location}}fl-menu-circle-left{{/if}}">
-    <div class="nav-toggle" tabindex="1">
+  <div class="fl-menu-circle-header {{#if location}}fl-menu-circle-left{{/if}} ">
+    <div class="nav-toggle focus-outline" tabindex="0">
       <div class="hamburger hamburger--slider">
         <span class="hamburger-box">
           <span class="hamburger-inner">
@@ -15,7 +15,7 @@
   <!-- END OF MENU BUTTON -->
 
   <!-- EXPANDABLE CIRCLE -->
-  <div class="fl-menu-circle-nav-holder {{#if location}}fl-menu-circle-left{{/if}}" tabindex="1">
+  <div class="fl-menu-circle-nav-holder {{#if location}}fl-menu-circle-left{{/if}}">
     <div class="nav-circle"></div>
   </div>
   <!-- END OF EXPANDABLE CIRCLE -->
@@ -25,7 +25,7 @@
 <div class="fl-menu-body fl-menu-circle-nav-list-holder {{#if location}}fl-menu-circle-left{{/if}}">
   <ul class="nav-list">
     {{#each pages as |page pageIndex|}}
-      <li class="linked {{#if page.icon}}with-icon{{/if}}" data-fl-navigate='{{{page.action}}}' data-page-id="{{page.pageId}}" tabindex="1">
+      <li class="linked {{#if page.icon}}with-icon{{/if}} focus-outline" data-fl-navigate='{{{page.action}}}' data-page-id="{{page.pageId}}" tabindex="0">
         {{#if page.icon}}
         <div class="fl-menu-icon">
           <i class="{{page.icon}} fa-fw"></i>
