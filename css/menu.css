@@ -130,7 +130,7 @@ body.disableScroll {
   padding-bottom: 30px;
   padding-bottom: calc(env(safe-area-inset-bottom) + 30px);
   z-index: 9;
-  -webkit-transform: translate3d(0, -100%, 0);	
+  -webkit-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
 }
 
