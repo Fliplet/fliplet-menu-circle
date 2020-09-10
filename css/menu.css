@@ -121,6 +121,7 @@ body.disableScroll {
 }
 
 .fl-menu-circle-nav-list-holder {
+  visibility: hidden;
   position: fixed;
   top: 0;
   right: 0;
@@ -138,6 +139,7 @@ body.disableScroll {
 }
 
 .fl-menu-circle-nav-list-holder.active {
+  visibility: visible;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
