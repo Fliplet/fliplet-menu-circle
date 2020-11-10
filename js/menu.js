@@ -54,7 +54,7 @@ function init() {
     $menuElement.removeClass('fl-menu-circle-move-left');
   }
 
-  $('.fl-menu-circle-header .nav-toggle').on('click keydown', function() {
+  $('.fl-menu-circle-header .nav-toggle').on('click keydown', function(event) {
     if (event.type !== 'click' && event.which !== 32 && event.which !== 13) {
       return;
     }
