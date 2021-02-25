@@ -59,22 +59,28 @@ function init() {
       return;
     }
 
-    $('body').toggleClass('disableScroll circle-menu-active');
-    $(this).find('.hamburger').toggleClass('is-active');
-    $(this).toggleClass('active');
-    $('.fl-menu-circle-nav-holder .nav-circle').toggleClass('active');
-    $('.fl-menu-circle-nav-list-holder').toggleClass('active').scrollTop(0);
+    var $this = $(this);
+    var $body = $('body')
 
-    if (!$('body').hasClass('hiddenScroll') && $('body').hasScrollBar() && $('body').hasClass('disableScroll') && Fliplet.Env.get('platform') !== 'native') {
-      $('.fl-menu-circle-header, .fl-menu-circle-nav-holder').css({
-        'right': '30px'
-      });
-    } else {
-      $('.fl-menu-circle-header, .fl-menu-circle-nav-holder').css({
-        'right': '15px'
-      });
-    }
+    $menuElement.find('.fl-menu-body').toggleClass('hidden');
+    $this.find('.hamburger').toggleClass('is-active');
+    $this.toggleClass('active');
 
+    setTimeout(function() {
+      $body.toggleClass('disableScroll circle-menu-active');
+      $menuElement.find('.fl-menu-circle-nav-holder .nav-circle').toggleClass('active');
+      $menuElement.find('.fl-menu-circle-nav-list-holder').toggleClass('active').scrollTop(0);
+  
+      if ($body.is(':not(.hiddenScroll).disableScroll') && $body.hasScrollBar() && Fliplet.Env.get('platform') !== 'native') {
+        $menuElement.find('.fl-menu-circle-header, .fl-menu-circle-nav-holder').css({	
+          'right': '30px'	
+        });
+      } else {
+        $menuElement.find('.fl-menu-circle-header, .fl-menu-circle-nav-holder').css({	
+          'right': '15px'	
+        });
+      }
+    }, 0);
   });
 
   $('[open-about-overlay]').on('click', function() {
