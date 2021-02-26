@@ -59,12 +59,12 @@ function init() {
       return;
     }
 
-    var $this = $(this);
+    var $toggle = $(this);
     var $body = $('body')
 
     $menuElement.find('.fl-menu-body').toggleClass('hidden');
-    $this.find('.hamburger').toggleClass('is-active');
-    $this.toggleClass('active');
+    $toggle.find('.hamburger').toggleClass('is-active');
+    $toggle.toggleClass('active');
 
     setTimeout(function() {
       $body.toggleClass('disableScroll circle-menu-active');
