@@ -22,7 +22,7 @@
 {{/if}}
 
 <!-- MENU -->
-<div class="fl-menu-body fl-menu-circle-nav-list-holder {{#if location}}fl-menu-circle-left{{/if}}">
+<div class="fl-menu-body fl-menu-circle-nav-list-holder {{#if location}}fl-menu-circle-left{{/if}} hidden">
   <ul class="nav-list">
     {{#each pages as |page pageIndex|}}
       <li class="linked {{#if page.icon}}with-icon{{/if}} focus-outline" data-fl-navigate='{{{page.action}}}' data-page-id="{{page.pageId}}" tabindex="0">
@@ -37,7 +37,7 @@
   </ul>
   <div class="fl-menu-foot">
     <div class="copyright">
-      <a href="#" open-about-overlay>About this app</a>
+      <a class="focus-outline" href="#" tabindex="0" open-about-overlay>About this app</a>
     </div>
   </div>
 </div>
