@@ -1,0 +1,11 @@
+{
+    "widgets": {
+        "menuCircle": {
+            "dataSource": {
+                "overlay": {
+                    "action": "About this app"
+                }
+            }
+        }
+    }
+}
