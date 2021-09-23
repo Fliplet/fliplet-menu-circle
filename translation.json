@@ -1,0 +1,12 @@
+{
+    "widgets": {
+        "menuCircle": {
+            "dataSource": {
+                "actions": {
+                    "exit": "Exit",
+                    "about": "About this app"
+                }
+            }
+        }
+    }
+}
