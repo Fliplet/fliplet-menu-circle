@@ -2,8 +2,9 @@
     "widgets": {
         "menuCircle": {
             "dataSource": {
-                "overlay": {
-                    "action": "About this app"
+                "actions": {
+                    "exit": "Exit",
+                    "overlay": "About this app"
                 }
             }
         }
