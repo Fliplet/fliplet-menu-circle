@@ -1,7 +1,7 @@
 {
     "widgets": {
         "menu": {
-            "circleBar": {
+            "circle": {
                 "actions": {
                     "exit": "Exit",
                     "about": "About this app"
