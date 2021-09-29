@@ -1,7 +1,7 @@
 {
     "widgets": {
-        "menuCircle": {
-            "dataSource": {
+        "menu": {
+            "circleBar": {
                 "actions": {
                     "exit": "Exit",
                     "about": "About this app"

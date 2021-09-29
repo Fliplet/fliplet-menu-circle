@@ -15,7 +15,7 @@ function init() {
       '<li class="linked with-icon" data-fl-exit-app>',
       '<div class="fl-menu-icon">',
       '<i class="fa fa-sign-out"></i>',
-      '</div>' + T('widgets.menuCircle.dataSource.actions.exit') + '</li>'
+      '</div>' + T('widgets..menu.circleBar.actions.exit') + '</li>'
     ].join(''));
 
     $exitButton.on('click', function onExitClick() {
