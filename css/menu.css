@@ -14,6 +14,7 @@ body.disableScroll {
 [data-has-notch].no-supports-container body,
 [data-has-notch].supports-container .fl-page-content-wrapper {
   padding-bottom: 99px;
+  overflow: hidden;
 }
 
 [data-has-notch].supports-container body {
