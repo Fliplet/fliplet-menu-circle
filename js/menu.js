@@ -8,6 +8,19 @@ if (menuInstanceId) {
 function init() {
   var data = Fliplet.Widget.getData(menuInstanceId) || {};
 
+  // Deduplicate pages to fix corrupted menu data
+  if (data.pages) {
+    var seenPages = {};
+
+    data.pages = data.pages.filter(function(page) {
+      if (seenPages[page.pageId]) return false;
+
+      seenPages[page.pageId] = true;
+
+      return true;
+    });
+  }
+
   Fliplet.Hooks.on('addExitAppMenuLink', function() {
     var $exitButton = $([
       '<li class="linked with-icon" data-fl-exit-app>',
