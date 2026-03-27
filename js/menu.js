@@ -8,18 +8,30 @@ if (menuInstanceId) {
 function init() {
   var data = Fliplet.Widget.getData(menuInstanceId) || {};
 
-  // Deduplicate pages to fix corrupted menu data
+  // Remove stale master page references that should have been replaced by production pages
+  var appPages = Fliplet.Env.get('appPages') || [];
+  var masterPageIds = {};
+
+  appPages.forEach(function(p) {
+    if (p.masterPageId) {
+      masterPageIds[p.masterPageId] = true;
+    }
+  });
+
   if (data.pages) {
-    var seenPages = {};
-
     data.pages = data.pages.filter(function(page) {
-      if (seenPages[page.pageId]) return false;
-
-      seenPages[page.pageId] = true;
-
-      return true;
+      return !page.pageId || !masterPageIds[page.pageId];
     });
   }
+
+  // Also remove already-rendered DOM elements for master pages
+  $menuElement.find('li[data-page-id]').each(function() {
+    var pageId = $(this).attr('data-page-id');
+
+    if (pageId && masterPageIds[pageId]) {
+      $(this).remove();
+    }
+  });
 
   Fliplet.Hooks.on('addExitAppMenuLink', function() {
     var $exitButton = $([
