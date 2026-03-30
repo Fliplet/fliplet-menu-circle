@@ -20,17 +20,19 @@ function init() {
 
   if (data.pages) {
     data.pages = data.pages.filter(function(page) {
-      return !page.pageId || !masterPageIds[page.pageId];
+      return !(page.pageId && masterPageIds[page.pageId]);
     });
   }
 
-  // Also remove already-rendered DOM elements for master pages
-  $menuElement.find('li[data-page-id]').each(function() {
-    var pageId = $(this).attr('data-page-id');
+  // Remove already-rendered DOM elements for master pages after template is ready
+  Fliplet().then(function() {
+    $menuElement.find('li[data-page-id]').each(function() {
+      var pageId = $(this).attr('data-page-id');
 
-    if (pageId && masterPageIds[pageId]) {
-      $(this).remove();
-    }
+      if (pageId && masterPageIds[pageId]) {
+        $(this).remove();
+      }
+    });
   });
 
   Fliplet.Hooks.on('addExitAppMenuLink', function() {
